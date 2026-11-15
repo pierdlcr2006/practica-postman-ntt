@@ -1,0 +1,1382 @@
+{
+  "info": {
+    "_postman_id": "a050ac38-f9fb-4dea-8a1e-6dd473356187",
+    "name": "practica-postman-ntt",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44411938"
+  },
+  "item": [
+    {
+      "name": "reqres",
+      "item": [
+        {
+          "name": "get-users",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"validar codigo de estado 200\", () => {\n    pm.response.to.have.status(200)\n});\n"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/users",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get-users",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{host}}/users",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "users"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "200"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 15 Nov 2026 21:52:59 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=30"
+                },
+                {
+                  "key": "cdn-cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"64a-u8E0TKsw8yebkF34MWHvT19LNBM\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\", <https://reqres.in/api/users?page=1>; rel=\"first\", <https://reqres.in/api/users?page=2>; rel=\"next\", <https://reqres.in/api/users?page=2>; rel=\"last\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "ratelimit-limit",
+                  "value": "20"
+                },
+                {
+                  "key": "ratelimit-policy",
+                  "value": "20;w=60"
+                },
+                {
+                  "key": "ratelimit-remaining",
+                  "value": "19"
+                },
+                {
+                  "key": "ratelimit-reset",
+                  "value": "60"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=5OQVwZvOG2%2F1kg0vJVtrrfbTvVoRQUqoX5mXokJS2T4%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794779579\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=5OQVwZvOG2%2F1kg0vJVtrrfbTvVoRQUqoX5mXokJS2T4%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794779579\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "ReqRes.in - Deploy backends in 30 seconds"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "233"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794787200"
+                },
+                {
+                  "key": "x-reqres-docs",
+                  "value": "https://reqres.in"
+                },
+                {
+                  "key": "x-reqres-message",
+                  "value": "This API is powered by ReqRes. Deploy your own backend in 30 seconds!"
+                },
+                {
+                  "key": "x-reqres-templates",
+                  "value": "https://app.reqres.in/templates"
+                },
+                {
+                  "key": "x-reqres-tip",
+                  "value": "Build with your own data, not fixtures - app.reqres.in/dashboard"
+                },
+                {
+                  "key": "x-reqres-upgrade",
+                  "value": "https://app.reqres.in/upgrade"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "9294aa05-0114-8db4-ac71-3cf9b567d492"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-total-count",
+                  "value": "12"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "BYPASS"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5b17c72883ddaa8-GIG"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"page\": 1,\n  \"per_page\": 6,\n  \"total\": 12,\n  \"total_pages\": 2,\n  \"data\": [\n    {\n      \"id\": 1,\n      \"email\": \"george.bluth@reqres.in\",\n      \"first_name\": \"George\",\n      \"last_name\": \"Bluth\",\n      \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\n    },\n    {\n      \"id\": 2,\n      \"email\": \"janet.weaver@reqres.in\",\n      \"first_name\": \"Janet\",\n      \"last_name\": \"Weaver\",\n      \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\n    },\n    {\n      \"id\": 3,\n      \"email\": \"emma.wong@reqres.in\",\n      \"first_name\": \"Emma\",\n      \"last_name\": \"Wong\",\n      \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\n    },\n    {\n      \"id\": 4,\n      \"email\": \"eve.holt@reqres.in\",\n      \"first_name\": \"Eve\",\n      \"last_name\": \"Holt\",\n      \"avatar\": \"https://reqres.in/img/faces/4-image.jpg\"\n    },\n    {\n      \"id\": 5,\n      \"email\": \"charles.morris@reqres.in\",\n      \"first_name\": \"Charles\",\n      \"last_name\": \"Morris\",\n      \"avatar\": \"https://reqres.in/img/faces/5-image.jpg\"\n    },\n    {\n      \"id\": 6,\n      \"email\": \"tracey.ramos@reqres.in\",\n      \"first_name\": \"Tracey\",\n      \"last_name\": \"Ramos\",\n      \"avatar\": \"https://reqres.in/img/faces/6-image.jpg\"\n    }\n  ],\n  \"support\": {\n    \"url\": \"https://reqres.in/go/clerk\",\n    \"text\": \"Your AI coding agent can add authentication and user management to your app with Clerk. Point it to clerk.com/SKILL.md and get building.\",\n    \"sponsored_by\": \"Clerk\"\n  },\n  \"_meta\": {\n    \"powered_by\": \"ReqRes\",\n    \"docs_url\": \"https://reqres.in/docs\",\n    \"upgrade_url\": \"https://app.reqres.in/upgrade\",\n    \"example_url\": \"https://reqres.in/docs#example-app\",\n    \"variant\": \"key_v1\",\n    \"message\": \"You are on the shared demo (no personal key), which has a low daily limit. A free account gives you your own key with 250 requests a day, plus request logs and your own collections.\",\n    \"cta\": {\n      \"label\": \"Get a free key\",\n      \"url\": \"https://app.reqres.in/?utm_source=reqres_api&utm_medium=json&utm_campaign=demo_meta_key\"\n    },\n    \"context\": \"keyless_success\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "get-user-by-id",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"usuario encontrado\", ()=>{\n    pm.response.to.have.status(200);\n});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/users/:userId",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "users",
+                ":userId"
+              ],
+              "variable": [
+                {
+                  "key": "userId",
+                  "value": "{{user_id}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get-user-by-id-not-found",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{host}}/users/:userid",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "users",
+                    ":userid"
+                  ],
+                  "variable": [
+                    {
+                      "key": "userid",
+                      "value": "30"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "404"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 15 Nov 2026 21:53:15 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "2"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "ratelimit-limit",
+                  "value": "20"
+                },
+                {
+                  "key": "ratelimit-policy",
+                  "value": "20;w=60"
+                },
+                {
+                  "key": "ratelimit-remaining",
+                  "value": "19"
+                },
+                {
+                  "key": "ratelimit-reset",
+                  "value": "60"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=AX4PZrvwD4WZQW5wPHheXhLclHUIeGpp4DCiMdiR4xc%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794779595\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=AX4PZrvwD4WZQW5wPHheXhLclHUIeGpp4DCiMdiR4xc%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794779595\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "ReqRes.in - Deploy backends in 30 seconds"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "232"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794787200"
+                },
+                {
+                  "key": "x-reqres-docs",
+                  "value": "https://reqres.in"
+                },
+                {
+                  "key": "x-reqres-message",
+                  "value": "This API is powered by ReqRes. Deploy your own backend in 30 seconds!"
+                },
+                {
+                  "key": "x-reqres-templates",
+                  "value": "https://app.reqres.in/templates"
+                },
+                {
+                  "key": "x-reqres-tip",
+                  "value": "Add real user auth to your app with magic codes - reqres.in/docs"
+                },
+                {
+                  "key": "x-reqres-upgrade",
+                  "value": "https://app.reqres.in/upgrade"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "b786e560-a69d-e4bd-b42c-b719c16a8aae"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "BYPASS"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5b17cd35e13daa8-GIG"
+                }
+              ],
+              "cookie": [],
+              "body": "{}"
+            },
+            {
+              "name": "get-user-by-id-succes",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{host}}/users/:userid",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "users",
+                    ":userid"
+                  ],
+                  "variable": [
+                    {
+                      "key": "userid",
+                      "value": "{{user_id}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "200"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 15 Nov 2026 21:55:57 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=30"
+                },
+                {
+                  "key": "cdn-cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"37e-r5XqK1Phm+1j3F8rNrB9pB/B4iY\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "ratelimit-limit",
+                  "value": "20"
+                },
+                {
+                  "key": "ratelimit-policy",
+                  "value": "20;w=60"
+                },
+                {
+                  "key": "ratelimit-remaining",
+                  "value": "18"
+                },
+                {
+                  "key": "ratelimit-reset",
+                  "value": "50"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=67nibrFTnncVMsmgGI%2BYGYfe1Q%2FuHD7QCy7wnjuT2oU%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794779757\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=67nibrFTnncVMsmgGI%2BYGYfe1Q%2FuHD7QCy7wnjuT2oU%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794779757\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "ReqRes.in - Deploy backends in 30 seconds"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "229"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794787200"
+                },
+                {
+                  "key": "x-reqres-docs",
+                  "value": "https://reqres.in"
+                },
+                {
+                  "key": "x-reqres-message",
+                  "value": "This API is powered by ReqRes. Deploy your own backend in 30 seconds!"
+                },
+                {
+                  "key": "x-reqres-templates",
+                  "value": "https://app.reqres.in/templates"
+                },
+                {
+                  "key": "x-reqres-tip",
+                  "value": "Generate a complete backend from a description - app.reqres.in/dashboard"
+                },
+                {
+                  "key": "x-reqres-upgrade",
+                  "value": "https://app.reqres.in/upgrade"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "8faa8f67-04b2-45fd-2589-03b7c2761452"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "BYPASS"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5b180cb4a801188-GIG"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": {\n    \"id\": 2,\n    \"email\": \"janet.weaver@reqres.in\",\n    \"first_name\": \"Janet\",\n    \"last_name\": \"Weaver\",\n    \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\n  },\n  \"support\": {\n    \"url\": \"https://reqres.in/go/clerk\",\n    \"text\": \"Your AI coding agent can add authentication and user management to your app with Clerk. Point it to clerk.com/SKILL.md and get building.\",\n    \"sponsored_by\": \"Clerk\"\n  },\n  \"_meta\": {\n    \"powered_by\": \"ReqRes\",\n    \"docs_url\": \"https://reqres.in/docs\",\n    \"upgrade_url\": \"https://app.reqres.in/upgrade\",\n    \"example_url\": \"https://reqres.in/docs#example-app\",\n    \"variant\": \"key_v1\",\n    \"message\": \"You are on the shared demo (no personal key), which has a low daily limit. A free account gives you your own key with 250 requests a day, plus request logs and your own collections.\",\n    \"cta\": {\n      \"label\": \"Get a free key\",\n      \"url\": \"https://app.reqres.in/?utm_source=reqres_api&utm_medium=json&utm_campaign=demo_meta_key\"\n    },\n    \"context\": \"keyless_success\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "save-user",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('usuario creado', () => {\n    pm.response.to.have.status(201);\n    let { id } =  pm.response.json()\n    pm.environment.set('user_id', id)\n});\nw"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"123\",\n    \"job\": \"asd\"\n    \n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{host}}/users",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "save-user-successful",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Piero\",\n    \"job\": \"backend\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{host}}/users",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "users"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "201"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 15 Nov 2026 22:14:31 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "1023"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"3ff-tgIAZzP/uuCEPd64OBeEUWr1Jzo\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "ratelimit-limit",
+                  "value": "20"
+                },
+                {
+                  "key": "ratelimit-policy",
+                  "value": "20;w=60"
+                },
+                {
+                  "key": "ratelimit-remaining",
+                  "value": "19"
+                },
+                {
+                  "key": "ratelimit-reset",
+                  "value": "60"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=qf3Ftd1asP5dgyx%2FJIq6rHLXeWcv9I13TizZLzFfQcw%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794780870\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=qf3Ftd1asP5dgyx%2FJIq6rHLXeWcv9I13TizZLzFfQcw%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794780870\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "ReqRes.in - Deploy backends in 30 seconds"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "224"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794787200"
+                },
+                {
+                  "key": "x-reqres-docs",
+                  "value": "https://reqres.in"
+                },
+                {
+                  "key": "x-reqres-message",
+                  "value": "This API is powered by ReqRes. Deploy your own backend in 30 seconds!"
+                },
+                {
+                  "key": "x-reqres-templates",
+                  "value": "https://app.reqres.in/templates"
+                },
+                {
+                  "key": "x-reqres-tip",
+                  "value": "Build with your own data, not fixtures - app.reqres.in/dashboard"
+                },
+                {
+                  "key": "x-reqres-upgrade",
+                  "value": "https://app.reqres.in/upgrade"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "be49f073-40ff-faa7-1b31-bc9f3cecc04f"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5b19bf9adc3debf-GIG"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"name\": \"Piero\",\n  \"job\": \"backend\",\n  \"id\": \"774\",\n  \"createdAt\": \"2026-11-15T22:14:30.967Z\",\n  \"support\": {\n    \"url\": \"https://reqres.in/go/clerk\",\n    \"text\": \"Your AI coding agent can add authentication and user management to your app with Clerk. Point it to clerk.com/SKILL.md and get building.\",\n    \"sponsored_by\": \"Clerk\"\n  },\n  \"_meta\": {\n    \"powered_by\": \"ReqRes\",\n    \"docs_url\": \"https://reqres.in/docs\",\n    \"upgrade_url\": \"https://app.reqres.in/upgrade\",\n    \"example_url\": \"https://reqres.in/docs#example-app\",\n    \"variant\": \"key_v1\",\n    \"message\": \"You are on the shared demo (no personal key), which has a low daily limit. A free account gives you your own key with 250 requests a day, plus request logs and your own collections.\",\n    \"cta\": {\n      \"label\": \"Get a free key\",\n      \"url\": \"https://app.reqres.in/?utm_source=reqres_api&utm_medium=json&utm_campaign=demo_meta_key\"\n    },\n    \"context\": \"keyless_success\",\n    \"persisted\": false,\n    \"persistence\": \"Demo endpoints echo writes without saving them. For data that persists, create a free project with POST https://reqres.in/api/projects/sandbox (no signup).\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "update-user",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('usuario actualizado', () => {\n    pm.response.to.have.status(200);\n});\n"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Santiago\",\n    \"job\": \"Administrador\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{host}}/users/:userId",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "users",
+                ":userId"
+              ],
+              "variable": [
+                {
+                  "key": "userId",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "update-user-successful",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Santiago\",\n    \"job\": \"Administrador\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{host}}/users/:userId",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "users",
+                    ":userId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "userId",
+                      "value": "2"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "200"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 15 Nov 2026 22:22:43 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"3fd-34DDEHiJmn7v/y5JDxmoBaM9E2o\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "ratelimit-limit",
+                  "value": "20"
+                },
+                {
+                  "key": "ratelimit-policy",
+                  "value": "20;w=60"
+                },
+                {
+                  "key": "ratelimit-remaining",
+                  "value": "19"
+                },
+                {
+                  "key": "ratelimit-reset",
+                  "value": "60"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=RhkB4vecmfUCheHsmT5bS8hyC%2BqtRQkRvjSSQfjEroQ%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794781363\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=RhkB4vecmfUCheHsmT5bS8hyC%2BqtRQkRvjSSQfjEroQ%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794781363\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "ReqRes.in - Deploy backends in 30 seconds"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "217"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794787200"
+                },
+                {
+                  "key": "x-reqres-docs",
+                  "value": "https://reqres.in"
+                },
+                {
+                  "key": "x-reqres-message",
+                  "value": "This API is powered by ReqRes. Deploy your own backend in 30 seconds!"
+                },
+                {
+                  "key": "x-reqres-templates",
+                  "value": "https://app.reqres.in/templates"
+                },
+                {
+                  "key": "x-reqres-tip",
+                  "value": "Build with your own data, not fixtures - app.reqres.in/dashboard"
+                },
+                {
+                  "key": "x-reqres-upgrade",
+                  "value": "https://app.reqres.in/upgrade"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "2d083c2e-f204-1d2f-b6be-93bd474cab94"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5b1a8001bb278c2-GIG"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"name\": \"Santiago\",\n  \"job\": \"Administrador\",\n  \"updatedAt\": \"2026-11-15T22:22:43.503Z\",\n  \"support\": {\n    \"url\": \"https://reqres.in/go/clerk\",\n    \"text\": \"Your AI coding agent can add authentication and user management to your app with Clerk. Point it to clerk.com/SKILL.md and get building.\",\n    \"sponsored_by\": \"Clerk\"\n  },\n  \"_meta\": {\n    \"powered_by\": \"ReqRes\",\n    \"docs_url\": \"https://reqres.in/docs\",\n    \"upgrade_url\": \"https://app.reqres.in/upgrade\",\n    \"example_url\": \"https://reqres.in/docs#example-app\",\n    \"variant\": \"key_v1\",\n    \"message\": \"You are on the shared demo (no personal key), which has a low daily limit. A free account gives you your own key with 250 requests a day, plus request logs and your own collections.\",\n    \"cta\": {\n      \"label\": \"Get a free key\",\n      \"url\": \"https://app.reqres.in/?utm_source=reqres_api&utm_medium=json&utm_campaign=demo_meta_key\"\n    },\n    \"context\": \"keyless_success\",\n    \"persisted\": false,\n    \"persistence\": \"Demo endpoints echo writes without saving them. For data that persists, create a free project with POST https://reqres.in/api/projects/sandbox (no signup).\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "delete-user",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/users/:userId",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "users",
+                ":userId"
+              ],
+              "variable": [
+                {
+                  "key": "userId",
+                  "value": "{{user_id}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "delete-user-successful",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{host}}/users/:userId",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "users",
+                    ":userId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "userId",
+                      "value": "{{user_id}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "204"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 15 Nov 2026 22:32:13 GMT"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "ratelimit-limit",
+                  "value": "20"
+                },
+                {
+                  "key": "ratelimit-policy",
+                  "value": "20;w=60"
+                },
+                {
+                  "key": "ratelimit-remaining",
+                  "value": "19"
+                },
+                {
+                  "key": "ratelimit-reset",
+                  "value": "60"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=%2BuEm79njOEKNgi6WFxcD3s%2FnKEL0DhXF1s9%2BkJCMMrU%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794781933\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=%2BuEm79njOEKNgi6WFxcD3s%2FnKEL0DhXF1s9%2BkJCMMrU%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794781933\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "ReqRes.in - Deploy backends in 30 seconds"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "215"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794787200"
+                },
+                {
+                  "key": "x-reqres-docs",
+                  "value": "https://reqres.in"
+                },
+                {
+                  "key": "x-reqres-message",
+                  "value": "This API is powered by ReqRes. Deploy your own backend in 30 seconds!"
+                },
+                {
+                  "key": "x-reqres-templates",
+                  "value": "https://app.reqres.in/templates"
+                },
+                {
+                  "key": "x-reqres-tip",
+                  "value": "Need more than /api/users? Build custom collections - app.reqres.in/dashboard"
+                },
+                {
+                  "key": "x-reqres-upgrade",
+                  "value": "https://app.reqres.in/upgrade"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "8941d916-3024-9dd1-8563-3db7e6992699"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5b1b5e78aaf6f01-GIG"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
